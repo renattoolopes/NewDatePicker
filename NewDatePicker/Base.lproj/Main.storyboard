@@ -17,18 +17,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="I83-P0-3fs">
-                                <rect key="frame" x="16" y="60" width="382" height="300"/>
+                                <rect key="frame" x="16" y="60" width="382" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="d8n-gG-hfw"/>
+                                    <constraint firstAttribute="height" constant="100" id="d8n-gG-hfw"/>
                                 </constraints>
                             </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PrL-HW-hzm">
+                                <rect key="frame" x="16" y="176" width="382" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCh-Vw-WdB">
+                                        <rect key="frame" x="0.0" y="0.0" width="124" height="30"/>
+                                        <color key="backgroundColor" red="0.35673737529999999" green="0.59370923040000001" blue="0.72943037749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="In Line">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krl-Qn-JSk">
+                                        <rect key="frame" x="129" y="0.0" width="124" height="30"/>
+                                        <color key="backgroundColor" red="0.35673737529999999" green="0.59370923040000001" blue="0.72943037749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="compact">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuY-T0-LlC">
+                                        <rect key="frame" x="258" y="0.0" width="124" height="30"/>
+                                        <color key="backgroundColor" red="0.35673737529999999" green="0.59370923040000001" blue="0.72943037749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="automatic">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PrL-HW-hzm" secondAttribute="trailing" constant="16" id="7O5-Zd-1dV"/>
                             <constraint firstItem="I83-P0-3fs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Edj-5v-ztA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I83-P0-3fs" secondAttribute="trailing" constant="16" id="WXs-LS-USl"/>
                             <constraint firstItem="I83-P0-3fs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="gcI-js-HAm"/>
+                            <constraint firstItem="PrL-HW-hzm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pcc-5v-XU8"/>
+                            <constraint firstItem="PrL-HW-hzm" firstAttribute="top" secondItem="I83-P0-3fs" secondAttribute="bottom" constant="16" id="vvf-8a-hgx"/>
                         </constraints>
                     </view>
                     <connections>
