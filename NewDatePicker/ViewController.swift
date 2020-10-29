@@ -17,5 +17,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    func setupDatePicker(withStyle style: UIDatePickerStyle) {
+        if #available(iOS 14, *) {
+            datePickerView.preferredDatePickerStyle = style
+        } else {
+            datePickerView.preferredDatePickerStyle = .automatic
+        }
+    }
 }
 
