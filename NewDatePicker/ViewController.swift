@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         setupDatePicker(withStyle: .wheels)
     }
     
+    // MARK: - Private Methods
     func setupDatePicker(withStyle style: UIDatePickerStyle) {
         datePickerView.preferredDatePickerStyle = style
     }
