@@ -11,7 +11,10 @@ class ViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet private weak var datePickerView: UIDatePicker!
-    
+    @IBOutlet private weak var inLineButton: UIButton!
+    @IBOutlet private weak var compactButton: UIButton!
+    @IBOutlet private weak var automaticButton: UIButton!
+
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()

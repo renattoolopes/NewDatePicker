@@ -61,7 +61,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="automaticButton" destination="yuY-T0-LlC" id="iVR-kH-uzN"/>
+                        <outlet property="compactButton" destination="krl-Qn-JSk" id="dbX-qD-lkB"/>
                         <outlet property="datePickerView" destination="I83-P0-3fs" id="wwo-X1-uqb"/>
+                        <outlet property="inLineButton" destination="dCh-Vw-WdB" id="s2L-6c-NCX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
