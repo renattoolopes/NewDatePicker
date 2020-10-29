@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="I83-P0-3fs">
-                                <rect key="frame" x="16" y="60" width="382" height="100"/>
+                                <rect key="frame" x="16" y="60" width="382" height="216"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="d8n-gG-hfw"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="d8n-gG-hfw"/>
                                 </constraints>
                             </datePicker>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PrL-HW-hzm">
-                                <rect key="frame" x="16" y="176" width="382" height="30"/>
+                                <rect key="frame" x="16" y="292" width="382" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCh-Vw-WdB">
                                         <rect key="frame" x="0.0" y="0.0" width="124" height="30"/>
@@ -31,6 +32,9 @@
                                         <state key="normal" title="In Line">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="touchedInLineButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vk9-65-tAV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krl-Qn-JSk">
                                         <rect key="frame" x="129" y="0.0" width="124" height="30"/>
@@ -38,13 +42,19 @@
                                         <state key="normal" title="compact">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="touchedCompactButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="XE3-Ax-foq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuY-T0-LlC">
                                         <rect key="frame" x="258" y="0.0" width="124" height="30"/>
                                         <color key="backgroundColor" red="0.35673737529999999" green="0.59370923040000001" blue="0.72943037749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="automatic">
+                                        <state key="normal" title="wheels">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="touchedWheelsButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="aht-6m-vST"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

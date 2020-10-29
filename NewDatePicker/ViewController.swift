@@ -18,32 +18,14 @@ class ViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupDatePicker(withStyle: .automatic)
+        setupDatePicker(withStyle: .wheels)
     }
     
     func setupDatePicker(withStyle style: UIDatePickerStyle) {
-        if #available(iOS 14, *) {
-            datePickerView.preferredDatePickerStyle = style
-        } else {
-            datePickerView.preferredDatePickerStyle = .automatic
-            guard style != .automatic else { return }
-            showAlert(withTitle: "Unavailable", andMessage: "This style is not available in current IOS Version")
-        }
-    }
-    
-    // MARK: - Private Methods
-    
-    private func showAlert(withTitle title: String, andMessage message: String) {
-        let alertController: UIAlertController = UIAlertController(title: title,
-                                                                   message: message,
-                                                                   preferredStyle: .alert)
-        let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alertController.addAction(okAction)
-        present(alertController, animated: true, completion: nil)
+        datePickerView.preferredDatePickerStyle = style
     }
     
     // MARK: - Actions
-    
     @IBAction private func touchedInLineButton() {
         setupDatePicker(withStyle: .inline)
     }
@@ -52,8 +34,8 @@ class ViewController: UIViewController {
         setupDatePicker(withStyle: .compact)
     }
     
-    @IBAction private func touchedAutomaticButton() {
-        setupDatePicker(withStyle: .automatic)
+    @IBAction private func touchedWheelsButton() {
+        setupDatePicker(withStyle: .wheels)
     }
 }
 
