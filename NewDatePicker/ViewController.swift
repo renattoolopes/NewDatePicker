@@ -15,10 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet private weak var compactButton: UIButton!
     @IBOutlet private weak var automaticButton: UIButton!
 
-    //MARK: - Lifecycle
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupDatePicker(withStyle: .automatic)
     }
     
     func setupDatePicker(withStyle style: UIDatePickerStyle) {
@@ -26,7 +26,34 @@ class ViewController: UIViewController {
             datePickerView.preferredDatePickerStyle = style
         } else {
             datePickerView.preferredDatePickerStyle = .automatic
+            guard style != .automatic else { return }
+            showAlert(withTitle: "Unavailable", andMessage: "This style is not available in current IOS Version")
         }
+    }
+    
+    // MARK: - Private Methods
+    
+    private func showAlert(withTitle title: String, andMessage message: String) {
+        let alertController: UIAlertController = UIAlertController(title: title,
+                                                                   message: message,
+                                                                   preferredStyle: .alert)
+        let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction private func touchedInLineButton() {
+        setupDatePicker(withStyle: .inline)
+    }
+    
+    @IBAction private func touchedCompactButton() {
+        setupDatePicker(withStyle: .compact)
+    }
+    
+    @IBAction private func touchedAutomaticButton() {
+        setupDatePicker(withStyle: .automatic)
     }
 }
 
